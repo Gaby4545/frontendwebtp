@@ -38,7 +38,7 @@ export default class Calendrier extends React.Component {
   }
 
   updateCalender() {
-    fetch(`http://70.82.155.207:3020/events/` + this.user.id).then(response => response.json()).then(data => {
+    fetch(`http://tmhb.ca:3020/events/` + this.user.id).then(response => response.json()).then(data => {
         console.log(data);
         this.setState({ events: data });
         //this.calender = <FullCalendar ref={this.calendarRef} plugins={[ dayGridPlugin ]} initialView="dayGridMonth" events={data}/>;
@@ -60,7 +60,7 @@ export default class Calendrier extends React.Component {
 
     console.log(this.dataToSend());
 
-    axios.put("http://70.82.155.207:3020/event", this.dataToSend()).then(() => {
+    axios.put("http://tmhb.ca:3020/event", this.dataToSend()).then(() => {
 
       //this.setState({events: [...this.state.events, this.state.newEvent]});
       this.updateCalender();
@@ -73,7 +73,7 @@ export default class Calendrier extends React.Component {
   }
 
   eventClick(info) {
-    axios.delete("http://70.82.155.207:3020/event/" + info.event.id).then(() => {
+    axios.delete("http://tmhb.ca:3020/event/" + info.event.id).then(() => {
       this.updateCalender();
 
       alert("Evenement : " + info.event.title + " suprime");

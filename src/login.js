@@ -51,7 +51,7 @@ export class Register extends React.Component {
 
     console.log(this.state.username);
 
-    axios.put("http://70.82.155.207:3020/user", {
+    axios.put("http://tmhb.ca:3020/user", {
       "username" : this.state.username, 
       "password" : this.state.password
     }).catch(function (error) {
@@ -128,7 +128,7 @@ export class Login extends React.Component {
 
     console.log(this.state.username);
 
-    axios.get("http://70.82.155.207:3020/user/checkpass/" + this.state.username + "/" + this.state.password).then(this.thenFunction).catch(function (error) {
+    axios.get("http://tmhb.ca:3020/user/checkpass/" + this.state.username + "/" + this.state.password).then(this.thenFunction).catch(function (error) {
       console.log(error);
       // Pas la meilleure facon et pas a la meilleure place
       window.alert("Informations de connexion invalides");
