@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 
 // BootStrap
-import 'bootstrap/dist/css/bootstrap.min.css'; // CSS
+//import 'bootstrap/dist/css/bootstrap.min.css'; // CSS
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Jumbotron from 'react-bootstrap/Jumbotron';
