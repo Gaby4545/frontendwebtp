@@ -14,6 +14,7 @@ import {
 
 // BootStrap
 //import 'bootstrap/dist/css/bootstrap.min.css'; // CSS
+//import 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -59,6 +60,13 @@ export default class App extends React.Component {
           
         </Navbar.Collapse>
       </Navbar>
+
+      <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous"
+/>
 
       <Switch>
         <Route exact path="/">
